@@ -12,7 +12,7 @@ safe: true
 
 # edit here to achieve your personal greatness
 url: http://roeiburstein.github.io/
-baseurl: /roeiburstein.github.io/
+baseurl:
 title: Roei Burstein
 author: Roei Burstein
 description: Personal blog and resume
