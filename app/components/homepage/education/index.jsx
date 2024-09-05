@@ -11,7 +11,7 @@ function Education() {
   return (
     <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
-        src="/section.svg"
+        src="./section.svg"
         alt="Hero"
         width={1572}
         height={795}
@@ -48,7 +48,7 @@ function Education() {
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
                     <div className="p-3 relative text-white">
                       <Image
-                        src="/blur-23.svg"
+                        src="./blur-23.svg"
                         alt="Hero"
                         width={1080}
                         height={200}
@@ -57,7 +57,7 @@ function Education() {
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-[#16f2b3]">
                           {education.duration}
-                        </p>
+                        </p>   
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
