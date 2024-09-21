@@ -86,20 +86,30 @@ function HeroSection() {
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
-                <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-pink-500">=</span>
-                <span className="text-gray-400">{'{'}</span>
+                <span className="mr-2 text-pink-500">class</span>
+                <span className="mr-2 text-green-400">Profile:</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-pink-500">def</span>
+                <span className="text-green-400">__init__</span>
+                <span className="text-gray-400">{`(`}</span>
+                <span className="text-cyan-400">self</span>
+                <span className="text-gray-400">{`)`}</span>
+                <span className="text-white">:</span>
+              </div>
+              <div>
+                <span className="ml-8 lg:ml-16 text-cyan-400">self</span>
+                <span className="text-white">.name</span>
+                <span className="text-red"> = </span>
                 <span className="text-gray-400">{`'`}</span>
                 <span className="text-amber-300">Roei Burstein</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
+              <div className="ml-8 lg:ml-16 mr-2">
+                <span className="text-cyan-400">self</span>
+                <span className="text-white">.skills</span>
+                <span className="text-red"> = </span>
+                <span className="text-gray-400">{`'`}</span>
                 <span className="text-amber-300">React</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">NextJS</span>
@@ -119,49 +129,27 @@ function HeroSection() {
                 <span className="text-amber-300">AWS</span>
                 <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
+              <div className="ml-8 lg:ml-16 mr-2">
+                <span className="text-cyan-400">self</span>
+                <span className="text-white">.hardWorker</span>
+                <span className="text-red"> = </span>
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
+              <div className="ml-8 lg:ml-16 mr-2">
+                <span className="text-cyan-400">self</span>
+                <span className="text-white">.selfLearner</span>
+                <span className="text-red"> = </span>                
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
+              <div className="ml-8 lg:ml-16 mr-2">
+                <span className="text-cyan-400">self</span>
+                <span className="text-white">.problemSolver</span>
+                <span className="text-red"> = </span>                
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
-              </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-gray-400">{`(`}</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
-              <div><span className="text-gray-400">{`};`}</span></div>
             </code>
           </div>
         </div>
