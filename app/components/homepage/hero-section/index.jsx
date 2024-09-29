@@ -10,7 +10,6 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
-  console.log("NEXT_PUBLIC_APP_URL:", process.env.NEXT_PUBLIC_APP_URL);
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
@@ -26,8 +25,8 @@ function HeroSection() {
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
             My name is {' '}
-            <span className=" text-pink-500">{process.env.NEXT_PUBLIC_APP_URL}</span>
-            {` , I'm a `}
+            <span className=" text-pink-500">{personalData.name}</span>
+            {`, I'm a `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>
             .
           </h1>
@@ -110,24 +109,23 @@ function HeroSection() {
                 <span className="text-cyan-400">self</span>
                 <span className="text-white">.skills</span>
                 <span className="text-red"> = </span>
+                <span className="text-gray-400">{"["}</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">React</span>
+                <span className="text-amber-300">Cloud-Native SaaS Development</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
+                <span className="text-amber-300">Backend Frameworks and Microservices</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
+                <span className="text-amber-300">Full Stack Development</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
+                <span className="text-amber-300">Cloud Infrastructure and Orchestration</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
+                <span className="text-amber-300">Security</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
+                <span className="text-amber-300">Data Processing and Machine Learning</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
+                <span className="text-amber-300">Database and Queuing Technologies</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
+                <span className="text-amber-300">APIs and Integration</span>
                 <span className="text-gray-400">{"'],"}</span>
               </div>
               <div className="ml-8 lg:ml-16 mr-2">
