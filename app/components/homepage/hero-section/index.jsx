@@ -10,6 +10,7 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
+  console.log(process.env.NEXT_PUBLIC_APP_URL);
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
