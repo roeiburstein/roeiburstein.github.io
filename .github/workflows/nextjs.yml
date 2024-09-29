@@ -73,10 +73,9 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Setup env secrets
         run: | # Secrets needed on the server
+          touch .env.production
           echo "NEXT_PUBLIC_APP_URL=${{secrets.NEXT_PUBLIC_APP_URL}}" >> .env.production
           echo "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=${{secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}}" >> .env.production
           echo "NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID}}" >> .env.production
@@ -86,6 +85,8 @@ jobs:
           echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}}" >> .env.production
       - name: Verify .env.production file
         run: cat .env.production
+      - name: Build with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
