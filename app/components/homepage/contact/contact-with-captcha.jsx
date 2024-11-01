@@ -26,6 +26,22 @@ function ContactWithCaptcha() {
     }
   };
 
+  const resetForm = () => {
+    setInput({
+      name: '',
+      email: '',
+      message: '',
+    });
+    setCaptcha(null);
+    setError({
+      email: false,
+      required: false
+    });
+    if (window.grecaptcha) {
+      window.grecaptcha.reset();
+    }
+  };
+
   const handleSendMail = async (e) => {
     e.preventDefault();
     if (!captcha) {
@@ -52,15 +68,7 @@ function ContactWithCaptcha() {
 
       if (res.status === 200 || teleRes.status === 200) {
         toast.success('Message sent successfully!');
-        setInput({
-          name: '',
-          email: '',
-          message: '',
-        });
-        setCaptcha(null);
-        if (window.grecaptcha) {
-          window.grecaptcha.reset();
-        }
+        resetForm();
       };
     } catch (error) {
       toast.error(error?.text || error);

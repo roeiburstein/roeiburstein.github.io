@@ -6,7 +6,7 @@ export const personalData = {
   email: 'roei.burstein@gmail.com',
   address: 'San Francisco, California',
   phone: '+1 (408) 598-6660',
-  github: 'https://github.com/roeiburstin',
+  github: 'https://github.com/roeiburstein',
   linkedIn: 'https://www.linkedin.com/in/roeiburstein/',
   leetcode: "https://leetcode.com/roeiburstein/",
   resume: "https://drive.google.com/file/d/1ld1K-J8n6TsWLBUDfdnY6iZg-KIZ48Zn/view?usp=sharing"
