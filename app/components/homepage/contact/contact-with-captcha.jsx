@@ -58,6 +58,9 @@ function ContactWithCaptcha() {
           message: '',
         });
         setCaptcha(null);
+        if (window.grecaptcha) {
+          window.grecaptcha.reset();
+        }
       };
     } catch (error) {
       toast.error(error?.text || error);

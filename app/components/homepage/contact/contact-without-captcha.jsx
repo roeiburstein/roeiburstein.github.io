@@ -46,6 +46,7 @@ function ContactWithoutCaptcha() {
           email: '',
           message: '',
         });
+        setError({ email: false, required: false });
       };
     } catch (error) {
       toast.error(error?.text || error);
