@@ -63,29 +63,12 @@ function ContactWithCaptcha() {
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
-      const emailResult = await emailjs.send(serviceID, templateID, input, options);
-      const apiResult = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, input);
+      await emailjs.send(serviceID, templateID, input, options);
+      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, input);
       
-      if (emailResult.status === 200 || apiResult.status === 200) {
-        // Clear form inputs
-        setInput({
-          name: '',
-          email: '',
-          message: ''
-        });
-        
-        // Reset captcha
-        captchaRef.current.reset();
-        setCaptcha('');
-
-        // Show success message
-        toast.success('Message sent successfully!', {
-          position: "top-right",
-          autoClose: 3000,
-        });
-      }
+      // Refresh the page after successful submission
+      window.location.reload();
     } catch (error) {
-      console.error('Error:', error);
       toast.error('Failed to send message. Please try again.');
     }
   };
